@@ -1,0 +1,7 @@
+{
+  "proxies": {
+    "/": {
+      "origin": "https://evening-ravine-78546.herokuapp.com/"
+    }
+  }
+}

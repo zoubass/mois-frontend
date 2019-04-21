@@ -19,7 +19,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://evening-ravine-78546.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -28,5 +27,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack"
+    }
   ]
 }
