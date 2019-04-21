@@ -1,7 +1,8 @@
 {
+  "root": "build/",
   "proxies": {
-    "/": {
-      "origin": "https://evening-ravine-78546.herokuapp.com/"
-    }
+  "/api": {
+    "origin": "https://evening-ravine-78546.herokuapp.com/"
   }
+}
 }
