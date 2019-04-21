@@ -43,7 +43,7 @@ export class PaymentForm extends Component {
   }
 
   async componentDidMount() {
-    const responseDetail = await fetch('/categories');
+    const responseDetail = await fetch('/api/categories');
     const fetchedCategories = await responseDetail.json();
     this.setState({categoryNames: fetchedCategories.map(category=> category.name), categoryIds: fetchedCategories.map(category=> category.id)});
   }

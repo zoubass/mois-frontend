@@ -15,7 +15,7 @@ export class PaymentDetail extends Component{
     const toDate = '29-03-2019';
     const accountId = 123;
 
-    const responseDetail = await fetch('/findPaymentsDetail/' + fromDate + '/' + toDate + '/' + accountId);
+    const responseDetail = await fetch('/api/findPaymentsDetail/' + fromDate + '/' + toDate + '/' + accountId);
     const bodyDetail = await responseDetail.json();
     this.setState({payment: bodyDetail[0], isLoading: false});
     console.log("Loguju payments");

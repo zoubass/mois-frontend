@@ -9,7 +9,7 @@ export class Home extends Component {
     };
 
     async componentDidMount() {
-        const response = await fetch('/findPayments');
+        const response = await fetch('/api/findPayments');
         const body = await response.json();
         this.setState({groups: body, isLoading: false});
     }
