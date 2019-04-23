@@ -142,7 +142,7 @@ export class PaymentForm extends Component {
     e.preventDefault();
     let newPaymentFromUser = this.state.newPayment;
 
-    fetch("/add_payment", {
+    fetch("/api/add_payment", {
       method: "POST",
       body: JSON.stringify(newPaymentFromUser),
       headers: {

@@ -40,7 +40,7 @@ export class CategoryForm extends Component {
   handleFormSubmit(e) {
     e.preventDefault();
     let newCategory = this.state.category;
-      fetch("/add_category", {
+      fetch("/api/add_category", {
         method: "POST",
         body: JSON.stringify(newCategory),
         headers: {

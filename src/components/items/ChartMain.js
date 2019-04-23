@@ -58,7 +58,7 @@ export class ChartMain extends Component {
 
         series.columns.template.events.on("hit", async function (ev) {
             let month = ev.target.column3D.dataItem.categories;
-            const responseMonth = await fetch("/getMonthItem/" + Object.values(month));
+            const responseMonth = await fetch("/api/getMonthItem/" + Object.values(month));
             const bodyMonth = await responseMonth.json();
             console.log("click bar: ", bodyMonth);
 
