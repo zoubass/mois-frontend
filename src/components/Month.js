@@ -109,10 +109,10 @@ export class Month extends Component {
         //*************************************
         //asynchroni ziskani dat z BE, cesta a parametry se nastavuji v anotaci nad danou metodou v controlleru
         //*************************************
-        const responseDetail = await fetch('/findPaymentsDetail/' + this.state.dateFrom + '/' + this.state.dateTo + '/' + this.state.accountId);
+        const responseDetail = await fetch('/api/findPaymentsDetail/' + this.state.dateFrom + '/' + this.state.dateTo + '/' + this.state.accountId);
         const bodyDetail = await responseDetail.json();
 
-        const responseSummary = await fetch('/findPaymentsSummary/' + this.state.dateFrom + '/' + this.state.dateTo + '/' + this.state.accountId);
+        const responseSummary = await fetch('/api/findPaymentsSummary/' + this.state.dateFrom + '/' + this.state.dateTo + '/' + this.state.accountId);
         const bodySummary = await responseSummary.json();
         this.setState({paymentsData: bodyDetail, summaryData: bodySummary, isLoading: false});
     }

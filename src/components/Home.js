@@ -22,13 +22,13 @@ export class Home extends Component {
         const responseItems = await fetch("/getBarChartYearItems/" + accountId);
         const bodyItems = await responseItems.json();
 
-        const responseDetail = await fetch('/findPaymentsCurrYearDetail/' + accountId);
+        const responseDetail = await fetch('/api/findPaymentsCurrYearDetail/' + accountId);
         const bodyDetail = await responseDetail.json();
 
-        const responseSummary = await fetch('/getCategoriesWithSumm/' + accountId);
+        const responseSummary = await fetch('/api/getCategoriesWithSumm/' + accountId);
         const bodySummary = await responseSummary.json();
 
-        const responseTotal = await fetch('/getTotalPaymentCount/' + accountId);
+        const responseTotal = await fetch('/api/getTotalPaymentCount/' + accountId);
         const bodyTotal = await responseTotal.json();
         this.setState({
             paymentsData: bodyDetail,

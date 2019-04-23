@@ -52,7 +52,7 @@ export class PaymentForm extends Component {
   }
 
   async componentDidMount() {
-    const responseDetail = await fetch('/categories');
+    const responseDetail = await fetch('/api/categories');
     const fetchedCats = await responseDetail.json();
     this.setState({
       redirectToMonth: false,
