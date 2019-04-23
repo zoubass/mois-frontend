@@ -19,7 +19,7 @@ export class Home extends Component {
     async componentDidMount() {
         const accountId = 123;
 
-        const responseItems = await fetch("/getBarChartYearItems/" + accountId);
+        const responseItems = await fetch("/api/getBarChartYearItems/" + accountId);
         const bodyItems = await responseItems.json();
 
         const responseDetail = await fetch('/api/findPaymentsCurrYearDetail/' + accountId);
